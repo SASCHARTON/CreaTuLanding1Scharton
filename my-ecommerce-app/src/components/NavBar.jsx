@@ -1,11 +1,4 @@
-// src/components/NavBar.jsx
 import React from 'react';
-// NOTA: En este entorno de ejecución, CartWidget se define directamente aquí
-// para evitar errores de resolución de módulos, ya que todos los componentes
-// se compilan como una sola unidad. En un proyecto real, CartWidget
-// estaría en su propio archivo (CartWidget.jsx) y se importaría.
-
-// Icono de carrito (ejemplo simple con SVG inline)
 const ShoppingCartIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -23,15 +16,13 @@ const ShoppingCartIcon = () => (
   </svg>
 );
 
-// Componente CartWidget (Definición incluida directamente aquí para la compilación en este entorno)
 function CartWidget() {
-  // Aquí podríamos usar useState para gestionar el número de ítems en el carrito
-  const itemCount = 3; // Valor de ejemplo para el número de ítems
+  const itemCount = 3;
 
   return (
     <div className="relative flex items-center cursor-pointer p-2 rounded-full hover:bg-gray-200 transition duration-300">
       <ShoppingCartIcon />
-      {/* Muestra el número de ítems en el carrito */}
+      {}
       <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
         {itemCount}
       </span>
@@ -40,7 +31,6 @@ function CartWidget() {
 }
 
 
-// Icono de la tienda (ejemplo simple con SVG inline)
 const StoreIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -58,17 +48,16 @@ const StoreIcon = () => (
   </svg>
 );
 
-// Componente NavBar
 function NavBar() {
   return (
     <nav className="bg-white shadow-md p-4 flex justify-between items-center rounded-b-lg">
-      {/* Sección del logo de la tienda */}
+      {}
       <div className="flex items-center space-x-2">
         <StoreIcon />
         <span className="text-2xl font-bold text-gray-800">Mi Tienda</span>
       </div>
 
-      {/* Enlaces de navegación */}
+      {}
       <ul className="flex space-x-6 text-lg">
         <li>
           <a href="#" className="text-gray-700 hover:text-indigo-600 transition duration-300">
@@ -92,7 +81,7 @@ function NavBar() {
         </li>
       </ul>
 
-      {/* Widget del carrito de compras */}
+      {}
       <CartWidget />
     </nav>
   );

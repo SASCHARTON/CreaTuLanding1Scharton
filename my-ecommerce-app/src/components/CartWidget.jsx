@@ -1,7 +1,5 @@
-// src/components/CartWidget.jsx
 import React from 'react';
 
-// Icono de carrito (ejemplo simple con SVG inline)
 const ShoppingCartIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -19,15 +17,13 @@ const ShoppingCartIcon = () => (
   </svg>
 );
 
-// Componente CartWidget
 function CartWidget() {
-  // Aquí podríamos usar useState para gestionar el número de ítems en el carrito
-  const itemCount = 3; // Valor de ejemplo para el número de ítems
+  const itemCount = 3;
 
   return (
     <div className="relative flex items-center cursor-pointer p-2 rounded-full hover:bg-gray-200 transition duration-300">
       <ShoppingCartIcon />
-      {/* Muestra el número de ítems en el carrito */}
+      {}
       <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
         {itemCount}
       </span>
